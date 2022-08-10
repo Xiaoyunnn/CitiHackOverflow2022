@@ -1,9 +1,9 @@
 import React from "react";
 import Footer from "../../components/footer/Footer";
-// import NavbarHome from "../../components/navbarHome/NavbarHome";
 import { Navigate } from "react-router-dom";
 import LoginSignupForms from "../../components/loginSignup/LoginSignupForms";
 import LoginSignupPanels from "../../components/loginSignup/LoginSignupPanels";
+import NavbarAuth from "../../components/navbar/NavbarAuth";
 
 function Signup({ isAuthenticated }) {
     if(isAuthenticated) {
@@ -11,7 +11,7 @@ function Signup({ isAuthenticated }) {
     }
     return (
         <>
-            {/*<NavbarHome />*/}
+            <NavbarAuth />
             <div className="container-main signup-mode">
                 <LoginSignupForms />
                 <LoginSignupPanels />
