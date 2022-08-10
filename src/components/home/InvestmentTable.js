@@ -1,5 +1,16 @@
 import React, {useState} from 'react';
-import {Paper, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, styled} from '@mui/material';
+import {
+    Paper,
+    Table,
+    TableBody,
+    TableCell,
+    TableContainer,
+    TableHead,
+    TablePagination,
+    TableRow,
+    styled,
+    tablePaginationClasses
+} from '@mui/material';
 import { tableCellClasses } from '@mui/material/TableCell';
 import "./home.css";
 
@@ -54,10 +65,24 @@ const rows = [
 
 const StyledTableCell = styled(TableCell)(() => ({
     [`&.${tableCellClasses.head}`]: {
-        backgroundColor: "#D4D4CB",
-        color: "#6E6E69",
+        backgroundColor: "var(--primary-700)",
+        color: "var(--primary-900)",
     },
     [`&.${tableCellClasses.body}`]: {
+        fontSize: 14,
+        fontFamily: "'Noto Sans', 'Roboto', sans-serif",
+        color: "var(--primary-900)",
+    },
+}));
+
+const StyledTablePagination = styled(TablePagination)(() => ({
+    [`&.${tablePaginationClasses.selectLabel}`]: {
+        color: "var(--primary-900)",
+        fontSize: 14,
+        fontFamily: "'Noto Sans', 'Roboto', sans-serif",
+    },
+    [`&.${tablePaginationClasses.displayedRows}`]: {
+        color: "var(--primary-900)",
         fontSize: 14,
         fontFamily: "'Noto Sans', 'Roboto', sans-serif",
     },
@@ -118,7 +143,7 @@ const InvestmentTable = () => {
                     </TableBody>
                 </Table>
             </TableContainer>
-            <TablePagination
+            <StyledTablePagination
                 rowsPerPageOptions={[10, 25, 100]}
                 component="div"
                 count={rows.length}
