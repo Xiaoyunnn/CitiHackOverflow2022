@@ -6,8 +6,8 @@ function NavbarAuth() {
     return (
         <div className="container-fluid">
             <nav className="navbar navbar-expand-lg navbar-light">
-                <a className="navbar-brand" id="punkt" href="/">
-                    Punkt.
+                <a className="navbar-brand" id="team-name" href="/">
+                    666
                 </a>
                 <button
                     className="navbar-toggler"

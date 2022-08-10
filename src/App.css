@@ -10,10 +10,7 @@
     --tertiary-700: #E8E4ED;
 }
 
-.container-main {
-  position: relative;
-  width: 100%;
-  background-color: white;
-  min-height: 100vh;
-  overflow: hidden;
+body {
+    font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }

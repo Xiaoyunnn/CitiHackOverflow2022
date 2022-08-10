@@ -1,3 +1,11 @@
+.container-main {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
 .container-forms {
     position: absolute;
     top: 0;
@@ -201,7 +209,7 @@ form.form-login {
     transform: translateY(-50%);
     transition: 1.8s ease-in-out;
     /* background-color: #86ccda; */
-    background-image: linear-gradient(-45deg, var(--primary-700), var(--primary-900));
+    background-image: linear-gradient(45deg, var(--primary-700), var(--primary-900));
     z-index: 6;
 }
 
