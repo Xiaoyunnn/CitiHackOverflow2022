@@ -1,0 +1,18 @@
+.card-container-lg {
+    background-color: #FFFFFF;
+    box-shadow: 1px 3px 8px 5px rgba(237, 237, 228, 0.25);
+    border-radius: 20px;
+    padding: 20px 25px;
+}
+
+.MuiSelect-select.MuiTablePagination-select.MuiSelect-standard.MuiInputBase-input.css-194a1fa-MuiSelect-select-MuiInputBase-input {
+    margin-bottom: 1rem;
+}
+
+.css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon {
+    top: 2px !important;
+}
+
+.css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar .MuiTablePagination-actions {
+    margin-bottom: 20px;
+}

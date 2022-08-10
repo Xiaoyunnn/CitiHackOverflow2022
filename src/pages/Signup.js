@@ -1,9 +1,9 @@
 import React from "react";
-import Footer from "../../components/footer/Footer";
+import Footer from "../components/footer/Footer";
 import { Navigate } from "react-router-dom";
-import LoginSignupForms from "../../components/loginSignup/LoginSignupForms";
-import LoginSignupPanels from "../../components/loginSignup/LoginSignupPanels";
-import NavbarAuth from "../../components/navbar/NavbarAuth";
+import LoginSignupForms from "../components/loginSignup/LoginSignupForms";
+import LoginSignupPanels from "../components/loginSignup/LoginSignupPanels";
+import NavbarAuth from "../components/navbar/NavbarAuth";
 
 function Signup({ isAuthenticated }) {
     if(isAuthenticated) {

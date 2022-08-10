@@ -14,3 +14,9 @@ body {
     font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
+
+.container-std {
+    padding: 80px 10% 0;
+    height: 100vh;
+    background-color: var(--bg-color);
+}
