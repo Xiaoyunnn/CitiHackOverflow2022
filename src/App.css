@@ -32,6 +32,14 @@ a:hover {
     background-color: var(--bg-color);
 }
 
+.side-bar-std {
+    background-color: var(--primary-600);
+    padding: 80px 40px 40px;
+    float: left;
+    width: 25%;
+    height: 1468px;
+}
+
 .flex {
     display: flex;
 }
