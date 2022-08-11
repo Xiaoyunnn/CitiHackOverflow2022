@@ -6,3 +6,7 @@
     background-color: var(--primary-900);
     color: white;
 }
+
+.container-footer p {
+    margin: 0;
+}

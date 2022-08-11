@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Searchbar from "./Searchbar";
 import LogoutIcon from '@mui/icons-material/Logout';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import {stocks} from "../../data/stocks";
+import {dummyData} from "../../data/dummyData";
 // import Notifications from "../notifications/Notifications";
 
 //redux
@@ -48,7 +48,7 @@ function NavbarHome({ user, logout }) {
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Searchbar data={stocks}/>
+                            <Searchbar data={dummyData}/>
                         </li>
 
                         <li className="nav-item">

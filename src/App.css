@@ -8,15 +8,65 @@
     --secondary-700: #C5DEE8;
     --tertiary-800: #8D7AA1;
     --tertiary-700: #E8E4ED;
+    --red: #D92F2F;
+    --green: #36B067;
 }
 
-body {
+body, p {
     font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary-800)
 }
 
 .container-std {
-    padding: 80px 10% 0;
-    height: 100vh;
+    padding: 80px 10% 40px;
     background-color: var(--bg-color);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-align-center {
+    display: flex;
+    align-items: center;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.margin-left-sm {
+    margin-left: 0.5rem;
+}
+
+.margin-bot-sm {
+    margin-bottom: 0.5rem;
+}
+
+.margin-bot-md {
+    margin-bottom: 0.8rem;
+}
+
+.margin-top-sm {
+    margin-top: 0.5rem;
+}
+
+.margin-top-md {
+    margin-top: 0.8rem;
 }

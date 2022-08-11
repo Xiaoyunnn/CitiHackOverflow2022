@@ -11,12 +11,12 @@ import {
     styled,
     tablePaginationClasses
 } from '@mui/material';
-import { tableCellClasses } from '@mui/material/TableCell';
+import {tableCellClasses} from '@mui/material/TableCell';
 import "./home.css";
 
 const columns = [
-    { id: 'name', label: 'Name', minWidth: 170 },
-    { id: 'code', label: 'ISO\u00a0Code', minWidth: 100 },
+    {id: 'name', label: 'Name', minWidth: 170},
+    {id: 'code', label: 'ISO\u00a0Code', minWidth: 100},
     {
         id: 'population',
         label: 'Population',
@@ -42,7 +42,7 @@ const columns = [
 
 function createData(name, code, population, size) {
     const density = population / size;
-    return { name, code, population, size, density };
+    return {name, code, population, size, density};
 }
 
 const rows = [
@@ -102,56 +102,56 @@ const InvestmentTable = () => {
     };
 
     return (
-        <div className="card-container-lg">
-            <p>Total Invested Value</p>
-            <p>$123,456.78</p>
-            <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-            <TableContainer sx={{ maxHeight: 440 }}>
-                <Table stickyHeader aria-label="sticky table">
-                    <TableHead>
-                        <TableRow>
-                            {columns.map((column) => (
-                                <StyledTableCell
-                                    key={column.id}
-                                    align={column.align}
-                                    style={{ minWidth: column.minWidth }}
-                                >
-                                    {column.label}
-                                </StyledTableCell>
-                            ))}
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {rows
-                            .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                            .map((row) => {
-                                return (
-                                    <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
-                                        {columns.map((column) => {
-                                            const value = row[column.id];
-                                            return (
-                                                <StyledTableCell key={column.id} align={column.align}>
-                                                    {column.format && typeof value === 'number'
-                                                        ? column.format(value)
-                                                        : value}
-                                                </StyledTableCell>
-                                            );
-                                        })}
-                                    </TableRow>
-                                );
-                            })}
-                    </TableBody>
-                </Table>
-            </TableContainer>
-            <StyledTablePagination
-                rowsPerPageOptions={[10, 25, 100]}
-                component="div"
-                count={rows.length}
-                rowsPerPage={rowsPerPage}
-                page={page}
-                onPageChange={handleChangePage}
-                onRowsPerPageChange={handleChangeRowsPerPage}
-            />
+        <div className="card-container lg">
+            <p className="subheading-1">Total Invested Value</p>
+            <p className="heading-1">$123,456.78</p>
+            <Paper sx={{width: '100%', overflow: 'hidden'}}>
+                <TableContainer sx={{maxHeight: 440}}>
+                    <Table stickyHeader aria-label="sticky table">
+                        <TableHead>
+                            <TableRow>
+                                {columns.map((column) => (
+                                    <StyledTableCell
+                                        key={column.id}
+                                        align={column.align}
+                                        style={{minWidth: column.minWidth}}
+                                    >
+                                        {column.label}
+                                    </StyledTableCell>
+                                ))}
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            {rows
+                                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                                .map((row) => {
+                                    return (
+                                        <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
+                                            {columns.map((column) => {
+                                                const value = row[column.id];
+                                                return (
+                                                    <StyledTableCell key={column.id} align={column.align}>
+                                                        {column.format && typeof value === 'number'
+                                                            ? column.format(value)
+                                                            : value}
+                                                    </StyledTableCell>
+                                                );
+                                            })}
+                                        </TableRow>
+                                    );
+                                })}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+                <StyledTablePagination
+                    rowsPerPageOptions={[10, 25, 100]}
+                    component="div"
+                    count={rows.length}
+                    rowsPerPage={rowsPerPage}
+                    page={page}
+                    onPageChange={handleChangePage}
+                    onRowsPerPageChange={handleChangeRowsPerPage}
+                />
             </Paper>
         </div>
     );
