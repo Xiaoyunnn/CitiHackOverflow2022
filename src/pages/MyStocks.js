@@ -4,6 +4,22 @@ import Footer from "../components/footer/Footer";
 import { getAllStockPrices } from "../api/stocks";
 import { dummyData } from "../data/dummyData";
 import InvestmentLineGraph from "../components/home/InvestmentLineGraph";
+import PortfolioCard from "../components/PortfolioCard";
+
+const unbalancedData = [
+    { name: 'TSLA', value: 400 },
+    { name: 'AAPL', value: 300 },
+    { name: 'NFLX', value: 300 },
+    { name: 'META', value: 200 },
+  ];
+
+  const balancedData = [
+    { name: 'TSLA', value: 300 },
+    { name: 'AAPL', value: 300 },
+    { name: 'NFLX', value: 300 },
+    { name: 'META', value: 300 },
+  ];
+
 
 const MyStocks = () => {
     const [stocks, setStocks] = useState(['TSLA', 'AAPL']);
@@ -43,6 +59,10 @@ const MyStocks = () => {
                     <div className="row" style={{ marginLeft: "25%" }}>
                         <InvestmentLineGraph/>
                     </div>
+                    <div className="row" style={{ marginLeft: "25%" }}>
+                        <PortfolioCard title={"Current Portfolio"} data={unbalancedData} />
+                        <PortfolioCard title={"Rebalanced Portfolio (12/8/2022)"} data={balancedData} />
+                    </div> 
                 </div>
             </div>
             <Footer />
