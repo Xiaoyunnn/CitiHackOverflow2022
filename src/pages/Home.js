@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import NavbarHome from "../components/navbar/NavbarHome";
 import InvestmentTable from "../components/home/InvestmentTable";
 import InvestmentCategoryCard from "../components/home/InvestmentCategoryCard";
 import Footer from "../components/footer/Footer";
 import InvestmentLineGraph from "../components/home/InvestmentLineGraph";
 import TopGainers from "../components/home/TopGainers";
-import {dummyData, news} from "../data/dummyData";
+import {dummyData, news as fakeNews} from "../data/dummyData";
 import NewsRow from "../components/home/NewsRow";
+import { getGeneralNews } from '../api/news';
 
 const Home = () => {
+    const [news, setNews] = useState([]);
+
+    useEffect(() => {
+        getGeneralNews().then(res => {
+            console.log(res);
+            if (res) {
+                setNews(res);
+            }
+        });
+    }, []);
+
     return (
         <div>
             <NavbarHome/>

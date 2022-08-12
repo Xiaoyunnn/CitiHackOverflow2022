@@ -1,8 +1,11 @@
 import React from 'react';
 import ShowChartIcon from '@mui/icons-material/ShowChart';
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
+import { useNavigate } from 'react-router-dom';
 
 const InvestmentCategoryCard = ({category, value, rate}) => {
+    let navigate = useNavigate();
+
     const getIcon = () => {
         switch (category) {
             case "Stocks":
@@ -19,7 +22,7 @@ const InvestmentCategoryCard = ({category, value, rate}) => {
     }
 
     return (
-        <div className="card-container sm col-lg-3 col-md-6 col-sm-12">
+        <div className="card-container sm col-lg-3 col-md-6 col-sm-12" onClick={e => navigate('/my-stocks')}>
             <div className="category-icon-container">
                 <div>
                     <p className="subheading-1">{category}</p>
